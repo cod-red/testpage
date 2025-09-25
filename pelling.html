@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>West Sikkim Tourist Destinations</title>
+    <link rel="stylesheet" href="pelling.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">West Sikkim Tours</div>
+        <ul class="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="index.html#itinerary">itinerary</a></li>
+        </ul>
+        <div class="menu-toggle">&#9776;</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Explore West Sikkim</h1>
+        <p>Discover breathtaking landscapes, rich culture & adventure at West Sikkim's top tourist destinations.</p>
+    </section>
+
+    <!-- Destinations Section -->
+    <section class="destinations" id="destinations">
+        <h2>Top Tourist Destinations in West Sikkim</h2>
+        <div class="cards">
+
+            <!-- Destination 1 -->
+            <div class="card">
+                <img src="image/pelling.jpeg" alt="Pelling">
+                <div class="card-content">
+                    <h3>Pelling</h3>
+                    <p>Panoramic views of Kanchenjunga range. Visit Pemayangtse Monastery, Rabdentse Ruins, Sky Walk, and waterfalls.</p>
+                </div>
+            </div>
+
+            <!-- Destination 2 -->
+            <div class="card">
+                <img src="image/yuksum.webp" alt="Yuksom">
+                <div class="card-content">
+                    <h3>Yuksom</h3>
+                    <p> It was the first capital of Kingdom of Sikkim established in 1642 AD by Phuntsog Namgyal, the first Chogyal of Sikkim.</p>
+                </div>
+            </div>            
+            <div class="card">
+                <img src="image/Khecheolpalri.jpg" alt="Khecheopalri Lake">
+                <div class="card-content">
+                    <h3>Khecheopalri Lake</h3>
+                    <p>the lake is sacred for both Buddhists and Hindus, and is believed to be a wish fulfilling lake. The local name for the lake is Sho Dzo Sho, which means "Oh Lady, Sit Here".</p>
+                </div>
+            </div>            
+            <div class="card">
+                <img src="image/Tashiding.jpg" alt="Tashiding">
+                <div class="card-content">
+                    <h3>Tashiding</h3>
+                    <p>Built in 1641 by Ngadak Sempa Chempo Phunshok Rigzing, one of the three wise men who blessed the first king of Sikkim, the monastery is a sacred site in Buddhism.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <p>© 2025 Anara Tours & Travels. All rights reserved.</p>
+            
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

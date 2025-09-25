@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>North Sikkim Itinerary — 3N/4D & 4N/5D</title>
+  <style>
+    :root{
+      --accent:#07689f;
+      --accent-2:#ffd460;
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --glass: rgba(255,255,255,0.65);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#f6fbff 0%,#f6f7fb 100%);color:#0f172a}
+    .container{max-width:1100px;margin:36px auto;padding:24px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#0ea5a5);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    h1{font-size:20px;margin:0}
+    p.lead{margin:4px 0 0;color:var(--muted);font-size:14px}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:20px}
+
+    /* main card */
+    .card{background:var(--card);border-radius:14px;box-shadow:0 6px 18px rgba(12,18,27,0.06);padding:18px}
+    .hero{display:flex;flex-direction:column;gap:12px}
+    .badge{display:inline-block;padding:6px 10px;background:var(--glass);border-radius:999px;font-weight:600}
+    .itins{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+
+    .itin{border:1px solid rgba(12,18,27,0.06);padding:12px;border-radius:10px;background:linear-gradient(180deg, #ffffff, #fcfcff)}
+    .itin h3{margin:0 0 6px;font-size:16px}
+    .meta{font-size:13px;color:var(--muted);margin-bottom:8px}
+    .days{list-style:none;padding:0;margin:0}
+    .days li{padding:8px 0;border-top:1px dashed #eef2f7;font-size:14px}
+    .days li:first-child{border-top:0}
+
+    /* side panel */
+    aside .card{position:sticky;top:28px}
+    .info-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #f1f5f9}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* actions */
+    .actions{display:flex;gap:8px;margin-top:14px}
+    .btn{border:0;padding:10px 14px;border-radius:10px;font-weight:600;cursor:pointer}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-ghost{background:transparent;border:1px solid rgba(12,18,27,0.06)}
+
+    /* packing list */
+    .pack{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:#f1f5f9;padding:8px 10px;border-radius:999px;font-size:13px}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+        nav {
+      background: var(--accent);
+      color: #fff;
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd460;
+    }
+
+    /* Hamburger menu */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+      border-radius: 3px;
+      transition: 0.3s;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: var(--accent);
+        position: absolute;
+        top: 60px;
+        right: 24px;
+        width: 200px;
+        padding: 12px;
+        border-radius: 8px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    /* Footer */
+    footer {
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 16px;
+      margin-top: auto;
+    }
+    /* responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr;}
+      .itins{grid-template-columns:1fr}
+      aside .card{position:static}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="brand">Anara Tours & Travels</div>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#packages">Tour Packages</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">NS</div>
+        <div>
+          <h1>North Sikkim Itineraries</h1>
+          <p class="lead">Ready-made 3N/4D & 4N/5D plans — Gurudongmar, Yumthang, Lachen & Lachung</p>
+        </div>
+      </div>
+      <div>
+        <button class="btn btn-ghost" onclick="window.print()">Print / Save as PDF</button>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <div class="hero">
+          <span class="badge">Travel Guide • North Sikkim</span>
+          <h2 style="margin:0">Choose your pace — curated itinerary plans</h2>
+          <p class="small" style="margin:0">In Both plans Gangtok is arrival/departure point. Permits required; arrange through Travel agent.
+            pickup/drop by shared jeep or private car from your station (NJP/Bagdogra/pakyong airport) (extra cost).
+          </p>
+        </div>
+
+        <div class="itins">
+
+          <!-- 4N/5D -->
+          <article class="itin">
+            <h3>4 Nights / 5 Days — Relaxed</h3>
+            <div class="meta">Best for acclimatisation & full exploration (Gurudongmar + Yumthang + Zero Point)</div>
+            <ul class="days">
+              <li><strong>Day 1:</strong> Arrive Gangtok. MG Marg, local sights. Overnight Gangtok.</li>
+              <li><strong>Day 2:</strong> Drive Gangtok → Lachen (via Seven Sisters, Singhik viewpoint). Overnight Lachen.</li>
+              <li><strong>Day 3:</strong> Early trip to Gurudongmar Lake → return → drive to Lachung. Overnight Lachung.</li>
+              <li><strong>Day 4:</strong> Yumthang Valley (+ Hot Springs). Optional Zero Point. Return to Gangtok overnight.</li>
+              <li><strong>Day 5:</strong> Departure from Gangtok.</li>
+            </ul>
+            <div class="actions">
+              <button class="btn btn-primary" onclick="selectItin('4N/5D')">Select Plan</button>
+              <button class="btn btn-ghost" onclick="copyItin('4N/5D')">Copy to clipboard</button>
+            </div>
+          </article>
+
+          <!-- 3N/4D -->
+          <article class="itin">
+            <h3>3 Nights / 4 Days — Short & Sweet</h3>
+            <div class="meta">Covers Gurudongmar & Yumthang but with less transit time</div>
+            <ul class="days">
+              <li><strong>Day 1:</strong> Gangtok → Lachen (stop at viewpoints & falls). Overnight Lachen.</li>
+              <li><strong>Day 2:</strong> Early Gurudongmar Lake → Lachen → drive to Lachung. Overnight Lachung.</li>
+              <li><strong>Day 3:</strong> Yumthang Valley (optional Zero Point). Return to Gangtok. Overnight Gangtok.</li>
+              <li><strong>Day 4:</strong> Departure from Gangtok.</li>
+            </ul>
+            <div class="actions">
+              <button class="btn btn-primary" onclick="selectItin('3N/4D')">Select Plan</button>
+              <button class="btn btn-ghost" onclick="copyItin('3N/4D')">Copy to clipboard</button>
+            </div>
+          </article>
+
+        </div>
+
+        <section style="margin-top:14px">
+          <h4 style="margin:0 0 8px">Quick Essentials</h4>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <div style="min-width:160px">
+              <div class="small">Best time</div>
+              <strong>Mar–Jun, Sep–Nov</strong>
+            </div>
+            <div style="min-width:160px">
+              <div class="small">Permits</div>
+              <strong>Required (Indian & foreign visitors)</strong>
+            </div>
+            <div style="min-width:160px">
+              <div class="small">Altitude tips</div>
+              <strong>Acclimatise in Lachen/Lachung; hydrate</strong>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-top:14px">
+          <h4 style="margin:0 0 8px">Packing checklist</h4>
+          <div class="pack">
+            <span class="chip">Warm jacket</span>
+            <span class="chip">Thermals</span>
+            <span class="chip">Sunscreen & sunglasses</span>
+            <span class="chip">Altitude medication</span>
+            <span class="chip">Power bank</span>
+            <span class="chip">ID / Permit copies</span>
+          </div>
+        </section>
+
+      </section>
+
+      <aside>
+        <div class="card">
+          <h4 style="margin:0 0 8px">Trip summary</h4>
+          <div class="info-row"><div class="small">Destinations</div><div>Gurudongmar, Yumthang, Zero Point</div></div>
+          <div class="info-row"><div class="small">Starting point</div><div>Gangtok</div></div>
+          <div class="info-row"><div class="small">Transport</div><div>Private car / shared jeep</div></div>
+          <div class="info-row"><div class="small">Difficulty</div><div>Moderate (high altitude)</div></div>
+
+          <div style="margin-top:12px">
+            <label class="small">Customize:</label>
+            <select id="custom" style="width:100%;padding:10px;border-radius:8px;margin-top:8px;border:1px solid #eef2f7">
+              <option>Standard (hotel stays)</option>
+              <option>Budget (guesthouses)</option>
+              <option>Luxury (premium hotels & private vehicle)</option>
+            </select>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <button class="btn btn-primary" onclick="downloadItin()">Download Itinerary</button>
+            <button class="btn btn-ghost" onclick="shareViaWhatsApp()">Share (With Partner)</button>
+          
+          </div>
+
+          <hr style="margin:14px 0;border:none;border-top:1px dashed #eef2f7">
+          <p class="small" style="margin:0">Tip: Book permits & vehicle through a registered operator in Gangtok. Check road/seasonal updates before travel.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div>North Sikkim itineraries</div>
+    </footer>
+  </div>
+
+  <script>
+    function selectItin(id){
+      alert('You selected itinerary: '+id+' — copy or download it from the side panel.');
+    }
+
+    function copyItin(id){
+      const map = {
+        '4N/5D': '4 Nights / 5 Days - Gangtok > Lachen > Gurudongmar > Lachung > Yumthang > Gangtok',
+        '3N/4D': '3 Nights / 4 Days - Gangtok > Lachen > Gurudongmar > Lachung > Yumthang > Gangtok'
+      };
+      navigator.clipboard?.writeText(map[id] || id).then(()=>{
+        alert('Itinerary copied to clipboard');
+      }).catch(()=>{
+        alert('Copy failed — you can manually select the text and copy it.');
+      });
+    }
+
+    function downloadItin(){
+      // Create a simple text download (user can print the page for full formatting)
+      const title = 'North-Sikkim-Itinerary.txt';
+      const content = document.querySelector('.card').innerText;
+      const blob = new Blob([content],{type:'text/plain'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = title; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    }
+
+    function shareViaWhatsApp(){
+      const msg = encodeURIComponent('North Sikkim itinerary — Gurudongmar, Yumthang, Lachen, Lachung. Ask me to customise.');
+      const url = 'https://wa.me/?text='+msg;
+      window.open(url, '_blank');
+    }
+  </script>
+  
+  <script>
+    // Toggle mobile menu
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

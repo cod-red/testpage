@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>West Sikkim Tourist Destinations</title>
+    <link rel="stylesheet" href="pelling.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Tsangmo Lake</div>
+        <ul class="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="index.html#itinerary">itinerary</a></li>
+        </ul>
+        <div class="menu-toggle">&#9776;</div>
+    </nav>    
+    <section class="hero">
+        <h1>Tsango Lake, Nathula Pass & Zuluk</h1>
+        <p>Explore Sikkims breathtaking gems in a memorable journey</p>
+    </section>    
+    <section class="destinations" id="destinations">
+        <h2>Itinerary</h2>
+        <div class="cards">            
+            <div class="card">
+                <img src="image/changu-lake.jpeg" alt="Tsango Lake">
+                <div class="card-content">
+                    <h3>1: Tsango Lake</h3>
+                    <p>Arrive in Gangtok and drive to Tsango Lake, a stunning glacial lake at 12,400 ft. Visit Baba Harbhajan Singh Mandir nearby.</p>
+                    
+                </div>
+            </div>            
+            <div class="card">
+                <img src="image/nathula.jpeg" alt="Nathula Pass">
+                <div class="card-content">
+                    <h3>2: Nathula Pass</h3>
+                    <p>Visit Nathula Pass, one of the highest motorable roads. Enjoy Himalayan views and learn about Indo-China history.</p>
+                    
+                </div>
+            </div>       
+            <div class="card">
+                <img src="image/zuluk.jpeg" alt="Zuluk">
+                <div class="card-content">
+                    <h3>3: Zuluk</h3>
+                    <p>Drive through the Old Silk Route to Zuluk. Enjoy hairpin bends, sunrise points, and explore the village’s cultural heritage.</p>
+                    
+                </div>
+            </div>
+         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <p>© 2025 Anara Tours & Travels. All rights reserved.</p>
+            
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
